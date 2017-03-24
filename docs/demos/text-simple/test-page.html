@@ -44,7 +44,7 @@
       <div ng-controller="TextSimpleCtrl" id="TextSimpleCtrl">
          <a href="#" editable-text="user.name" e-label="User Name">{{ user.name || 'empty' }}</a>
       </div>
-      <pre id="result">{{ debug["text-simple"] | json }}</pre>
+      <pre id="result">{{ user | json }}</pre>
       
       <script>
          app.controller('TextSimpleCtrl', function($scope) {
