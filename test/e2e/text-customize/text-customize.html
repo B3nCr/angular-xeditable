@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular-xeditable :: Edit in place for AngularJS</title>
+    <!--theme: Bootstrap 3-->
+    <link href="../../../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" media="screen">
+    <!--xeditable css-->
+    <link href="../../../dist/css/xeditable.css" rel="stylesheet" media="screen">
+    <!--angular-->
+    <script src="../../../bower_components/angular/angular.js"></script>
+    <script src="../../../bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <!--jquery (needed for bootstrap)-->
+    <script src="../../../bower_components/jquery/dist/jquery.js"></script>
+    <!--bootstrap-->
+    <script src="../../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!--angular-ui-bootstrap-->
+    <script src="../../../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <!--ui-select-->
+    <script src="../../../bower_components/angular-ui-select/dist/select.js"></script>
+    <!--xeditable-->
+    <script src="../../../dist/js/xeditable.js"></script>
+</head>
+<body>
+    <div ng-controller="TextCustomizeCtrl" id="TextCustomizeCtrl">
+        <a href="#" editable-text="user.name"
+           e-style="color: green"
+           e-required
+           e-placeholder="Enter name"
+           e-formclass="class1 class2"
+           e-inputgroupleft="left"
+           e-inputgroupright="right">
+            {{ (user.name || 'empty') | uppercase }}
+        </a>
+    </div>
+
+    <pre id="result">{{ debug["text-simple"] | json }}</pre>
+
+    <script>
+        angular.module("app",
+            [
+                "xeditable", 'ui.bootstrap', 'ngSanitize'
+            ])
+            .controller('TextCustomizeCtrl', function ($scope) {
+                $scope.user = {
+                    name: 'awesome user'
+                };
+            });
+    </script>
+</body>
+</html>
