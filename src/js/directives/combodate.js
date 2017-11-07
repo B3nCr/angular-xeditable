@@ -29,11 +29,7 @@ angular.module('xeditable').directive('editableCombodate', ['editableDirectiveFa
           //.replace is so this works in Safari
           self.scope.$data = combodate.getValue() ?
               (new Date(combodate.getValue().replace(/-/g, "/"))).toISOString() : null;
-<<<<<<< HEAD
-        }).change();;
-=======
         }).change();
->>>>>>> 201602f984a2a87d7eda9079b199d3888eacfb6a
       }
     });
   }
