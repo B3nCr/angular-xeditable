@@ -6,7 +6,7 @@ exports.config = {
 };
 
 if (process.env.TRAVIS) {
-	exports.config.baseUrl = 'http://localhost:4443/'; // Change to your dev server
+	exports.config.baseUrl = 'http://localhost:4443'; // Change to your dev server
 	exports.config.capabilities["tunnel-identifier"] = process.env.TRAVIS_JOB_NUMBER; // this is required by saucelabs
 	exports.config.sauceUser = process.env.SAUCE_USERNAME;
 	exports.config.sauceKey = process.env.SAUCE_ACCESS_KEY;
