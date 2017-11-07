@@ -28,7 +28,12 @@ module.exports = [
         {id: 'validate-remote', text: 'Validate remote', fiddle: 'http://jsfiddle.net/ckosloski/NfPcH/19055/'},
         {id: 'edit-disabled', text: 'Disable editing'},
         {id: 'editable-popover', text: 'Editable Popover'},
+<<<<<<< HEAD
         {id: 'uipopover', text: 'Editable ui-bootstrap Popover'}
+=======
+        {id: 'uipopover', text: 'Editable ui-bootstrap Popover'},
+        {id: 'e-single', text: 'Single editable in a form'}
+>>>>>>> 201602f984a2a87d7eda9079b199d3888eacfb6a
     ]},
 
     {id: 'onbeforesave', text: 'Submit', type: 'demos', items: [
